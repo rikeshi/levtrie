@@ -1,0 +1,8 @@
+#!/bin/sh
+# Example compile script
+
+if [ ! -d target ]; then
+    mkdir target
+fi
+cd levtrie
+scalac -d ../target Main.scala Trie.scala SearchTrie.scala TrieIO.scala

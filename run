@@ -1,0 +1,13 @@
+#!/bin/sh
+# Example run script
+
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <dir>"
+    exit 1
+fi
+dir=$1
+if [ ! -d $dir ]; then
+    echo "No such directory: $dir"
+    exit 1
+fi
+scala -cp ./target Main $dir
